@@ -1,8 +1,13 @@
 import React from 'react'
+import PixelName from './PixelName'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <React.Fragment>
+      <h1>React development has begun!</h1>
+      <PixelName />
+    </React.Fragment>
+
   )
 }
 
