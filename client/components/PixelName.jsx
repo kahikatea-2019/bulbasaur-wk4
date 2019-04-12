@@ -17,7 +17,7 @@ class PixelName extends React.Component {
 
   render () {
     const pixelLetterArr = this.state.string.split('').map((letter, i) => {
-      return <PixelLetter key={i} letter={letter} />
+      return <PixelLetter key={i} letter={letter} random={this.props.random}/>
     })
     return (
       <div className="pixel-name">
