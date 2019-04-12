@@ -18,18 +18,22 @@ class PixelLetter extends React.Component {
   }
 
   render () {
-    const pixelArray = letterArrays[this.state.letter.toUpperCase()].map((arr, i) => {
-      return arr.map((pixel, j) => {
-        let color = ''
-        if (pixel) { color = '#f82035' }
-        return <Pixel key={j} style = {{ backgroundColor: color }}/>
+    let pixelArray = []
+    if (letterArrays[this.state.letter.toUpperCase()] !== undefined) {
+      pixelArray = letterArrays[this.state.letter.toUpperCase()].map((arr, i) => {
+        return arr.map((pixel, j) => {
+          let color = ''
+          if (pixel) { color = '#fae529' }
+          return <Pixel key={j} style = {{ backgroundColor: color }}/>
+        })
       })
-    })
-    return (
-      <div className="pixel-letter">
-        {pixelArray}
-      </div>
-    )
+      return (
+        <div className="pixel-letter">
+          {pixelArray}
+        </div>
+      )
+    }
+    return []
   }
 }
 

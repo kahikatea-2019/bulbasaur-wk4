@@ -8,14 +8,13 @@ h1 {
 }
 
 .pixel {
-  height: 25px;
+  height: 20px;
   flex: 15%;
-  border: 1px dotted black;
 }
 
 .pixel-letter {
   display: flex;
-  width: 150px;
+  width: 120px;
   flex-wrap: wrap;
   align-content: stretch;
 }
@@ -23,6 +22,7 @@ h1 {
 .pixel-name {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 h2 {
@@ -37,7 +37,6 @@ div {
 
 
 }
-
 
 .spinner {
   margin-top: 5rem;
