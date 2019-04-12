@@ -3,6 +3,7 @@ h1 {
 }
 
 h1 {
+  margin: 0px!important;
   text-align: center;
 }
 
@@ -37,7 +38,39 @@ div {
 
 }
 
-body { 
-  background: #adff9e url("https://img1.goodfon.com/original/1920x1080/4/59/8bit-vremya-sutki-vecher-more.jpg") no-repeat fixed center; 
+.spinner {
+  margin-top: 5rem;
+  width: 5rem;
+  height: 5rem;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  opacity: 0.5;
 }
 
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+
+body {
+  margin: 0; padding: 0;
+}
+.hero-bkg-animated {
+  z-index: 5;
+  background: gray url("https://img1.goodfon.com/original/1920x1080/4/59/8bit-vremya-sutki-vecher-more.jpg") repeat 0 0;
+  width: 100%;
+  height: 1080px;
+  margin: 0;
+  text-align: center;
+  -webkit-animation: slide 30s linear infinite;
+}
+
+.hero-bkg-animated h1 {
+  font-family: sans-serif;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
