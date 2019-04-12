@@ -8,18 +8,20 @@ h1 {
 
 .pixel {
   height: 25px;
-  flex: 18%;
+  flex: 15%;
+  border: 1px dotted black;
 }
 
 .pixel-letter {
   display: flex;
-  width: 130px;
+  width: 150px;
   flex-wrap: wrap;
   align-content: stretch;
 }
 
 .pixel-name {
   display: flex;
+  flex-wrap: wrap;
 }
 
 h2 {
@@ -36,6 +38,11 @@ div {
 }
 
 body { 
+<<<<<<< HEAD
   background: #adff9e url("https://img1.goodfon.com/original/1920x1080/4/59/8bit-vremya-sutki-vecher-more.jpg") no-repeat fixed center; 
 }
 
+=======
+  background: #adff9e url("https://img1.goodfon.com/original/1920x1080/4/59/8bit-vremya-sutki-vecher-more.jpg") no-repeat fixed center;
+}
+>>>>>>> f77dd5263909592fb024f5f5ca71cadc4931b1b1

@@ -4,7 +4,7 @@ import PixelName from './PixelName'
 
 class PokeName extends React.Component {
   state = {
-    output: 'Your name here'
+    output: 'The quick brown-fox jumps over the lazy dog '
   }
 
   getPokeNames = () => {
