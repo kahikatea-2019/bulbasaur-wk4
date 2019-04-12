@@ -38,10 +38,10 @@ class PokeName extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <h2>Name:</h2>
+        <h2></h2>
         <PixelName string={this.state.output}/>
         <br />
-        <label htmlFor="newNameAdd">Name Generator: </label>
+        <label htmlFor="newNameAdd">Enter your name:</label>
         <input type='string' onChange={this.pokeName}/>
       </React.Fragment>
 
