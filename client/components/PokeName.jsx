@@ -1,13 +1,15 @@
 import React from 'react'
 
+import PixelName from './PixelName'
+
 class PokeName extends React.Component {
   state = {
-    output: 'Your Poke Name will appear hear 👂'
+    output: 'Your name here'
   }
 
   getPokeNames = () => {
     return {
-      'pokenames': [ 'Bulb', 'Char', 'Squir', 'Blas', 'Pika', 'Zu', 'Jiggly', 'Seel', 'Mew', 'Turt', 'Karp', 'Poke', 'Dude', 'Dactyl', 'Poreon', 'Mander', 'Weed', 'Rina', 'Sect', 'Dabra', 'Cool', 'Torb', 'Whirl', 'Fairy', 'Rina', 'Meleon', 
+      'pokenames': [ 'Bulb', 'Char', 'Squir', 'Blas', 'Pika', 'Zu', 'Jiggly', 'Seel', 'Mew', 'Turt', 'Karp', 'Poke', 'Dude', 'Dactyl', 'Poreon', 'Mander', 'Weed', 'Rina', 'Sect', 'Dabra', 'Cool', 'Torb', 'Whirl', 'Fairy', 'Rina', 'Meleon'
       ]
     }
   }
@@ -17,13 +19,17 @@ class PokeName extends React.Component {
     poketags = poketags.pokenames
     const length = poketags.length
     console.log(length)
-    
+
     let randomNum = Math.floor(Math.random() * length)
-    let randomName = event.target.value + "-" + poketags[randomNum]
+    let randomName = event.target.value + '-' + poketags[randomNum]
 
     this.setState({
       output: randomName
     })
+  }
+
+  componentDidMount () {
+    // console.log(this.state.output)
   }
 
   render () {
@@ -31,6 +37,7 @@ class PokeName extends React.Component {
       <React.Fragment>
         <h2>Name:</h2>
         <div>{this.state.output}</div>
+        <PixelName string={this.state.output}/>
         <br />
         <label htmlFor="newNameAdd">Name Generator: </label>
         <input name="name"

@@ -5,20 +5,29 @@ import Pixel from './Pixel'
 import letterArrays from '../../lettersData'
 
 class PixelLetter extends React.Component {
-  letter = this.props.letter.toUpperCase()
+  state = {
+    letter: this.props.letter
+  }
 
-  pixelArray = letterArrays[this.letter].map((arr, i) => {
-    return arr.map((pixel, j) => {
-      let color = '#adff9e'
-      if (pixel) { color = '#f82035' }
-      return <Pixel key={j} style = {{ backgroundColor: color }}/>
-    })
-  })
+  componentDidUpdate (prevProps) {
+    if (this.props.letter !== prevProps.letter) {
+      this.setState({
+        letter: this.props.letter
+      })
+    }
+  }
 
   render () {
+    const pixelArray = letterArrays[this.state.letter.toUpperCase()].map((arr, i) => {
+      return arr.map((pixel, j) => {
+        let color = '#adff9e'
+        if (pixel) { color = '#f82035' }
+        return <Pixel key={j} style = {{ backgroundColor: color }}/>
+      })
+    })
     return (
       <div className="pixel-letter">
-        {this.pixelArray}
+        {pixelArray}
       </div>
     )
   }

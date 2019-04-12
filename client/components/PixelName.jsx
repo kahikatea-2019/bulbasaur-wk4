@@ -3,20 +3,25 @@ import React from 'react'
 import PixelLetter from './PixelLetter.jsx'
 
 class PixelName extends React.Component {
-  stringArr = this.props.string.split('')
+  state = {
+    string: this.props.string
+  }
 
-  pixelLetterArr = this.stringArr.map((letter, i) => {
-    return <PixelLetter key={i} letter={letter} />
-  })
-
-  componentDidMount () {
-    console.log(this.stringArr)
+  componentDidUpdate (prevProps) {
+    if (this.props.string !== prevProps.string) {
+      this.setState({
+        string: this.props.string
+      })
+    }
   }
 
   render () {
+    const pixelLetterArr = this.state.string.split('').map((letter, i) => {
+      return <PixelLetter key={i} letter={letter} />
+    })
     return (
       <div className="pixel-name">
-        {this.pixelLetterArr}
+        {pixelLetterArr}
       </div>
     )
   }
