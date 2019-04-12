@@ -3,6 +3,7 @@ h1 {
 }
 
 h1 {
+  margin: 0px!important;
   text-align: center;
 }
 
@@ -60,10 +61,10 @@ body {
   z-index: 5;
   background: gray url("https://img1.goodfon.com/original/1920x1080/4/59/8bit-vremya-sutki-vecher-more.jpg") repeat 0 0;
   width: 100%;
+  height: 1080px;
   margin: 0;
   text-align: center;
-  box-sizing: border-box;
-  -webkit-animation: slide 60s linear infinite;
+  -webkit-animation: slide 30s linear infinite;
 }
 
 .hero-bkg-animated h1 {
