@@ -7,7 +7,7 @@ class PokeName extends React.Component {
 
   getPokeNames = () => {
     return {
-      'pokenames': [ 'Bulb', 'Char', 'Squir', 'Blas', 'Pika', 'Zu', 'Jiggly', 'Seel', 'Mew', 'Turt', 'war', 
+      'pokenames': [ 'Bulb', 'Char', 'Squir', 'Blas', 'Pika', 'Zu', 'Jiggly', 'Seel', 'Mew', 'Turt', 'Karp', 'Poke', 'Dude', 'Dactyl', 'Poreon', 'Mander', 'Weed', 'Rina', 'Sect', 'Dabra', 'Cool', 'Torb', 'Whirl', 'Fairy', 'Rina', 'Meleon', 
       ]
     }
   }
