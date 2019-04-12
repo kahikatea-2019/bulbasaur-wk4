@@ -1,0 +1,19 @@
+h1 {
+  color: green;
+}
+
+.pixel {
+  height: 25px;
+  flex: 18%;
+}
+
+.pixel-letter {
+  display: flex;
+  width: 130px;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.pixel-name {
+  display: flex;
+}
