@@ -39,7 +39,7 @@ class PokeName extends React.Component {
     return (
       <React.Fragment>
         <h2></h2>
-        <PixelName string={this.state.output}/>
+        <PixelName string={this.state.output} random={this.props.random}/>
         <br />
         <label htmlFor="newNameAdd">Enter your name:</label>
         <input type='string' onChange={this.pokeName}/>
