@@ -20,7 +20,7 @@ class PixelLetter extends React.Component {
   render () {
     const pixelArray = letterArrays[this.state.letter.toUpperCase()].map((arr, i) => {
       return arr.map((pixel, j) => {
-        let color = '#adff9e'
+        let color = ''
         if (pixel) { color = '#f82035' }
         return <Pixel key={j} style = {{ backgroundColor: color }}/>
       })
