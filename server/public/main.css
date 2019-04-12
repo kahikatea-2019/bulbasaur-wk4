@@ -7,9 +7,13 @@ h1 {
   flex: 18%;
 }
 
-.pixel-name {
+.pixel-letter {
   display: flex;
   width: 130px;
   flex-wrap: wrap;
   align-content: stretch;
+}
+
+.pixel-name {
+  display: flex;
 }
