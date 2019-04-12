@@ -19,11 +19,13 @@ render () {
       <h2>Name:</h2>
       <div>{this.state.nameAdd}</div>
       <br />
-      <label htmlFor="newNameAdd">Name Generator: </label>
-      <input name="newCount"
-        type='string'
-        onChange={this.pokeName}
-        onFocus={() => console.log(`hello there`)} />
+      <div className="inputContainer">
+        <label htmlFor="newNameAdd">Name Generator: </label>
+        <input name="newCount"
+          type='string'
+          onChange={this.pokeName}
+          onFocus={() => console.log(`hello there`)} />
+      </div>
     </React.Fragment>
 
   )
